@@ -73,29 +73,33 @@ export const Header = () => {
   const toggleRef = useRef(null);
 
   return (
-    <div className="navbar6-container">
-      <Link href="/" passHref>
-        <a className="navbar6-link">
-          <Logo />
-        </a>
-      </Link>
+    <div className="navbar6-wrapper">
+      <div className="navbar6-container">
+        <Link href="/" passHref>
+          <a className="navbar6-link">
+            <Logo />
+          </a>
+        </Link>
 
-      <div
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        className="navbar6hamburger-menu"
-      >
-        ☰
-      </div>
-      <div className={menuClass}>
-        <Link href="#">
-          <a
-            className="navbar6-link nav-item"
-            onClick={(e) => {
-              e.preventDefault();
-              toggleMenu(setServicesOpen, servicesOpen);
-            }}
-          >
-            Services
+        <div
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="navbar6hamburger-menu"
+        >
+          ☰
+        </div>
+        <div className={menuClass}>
+          <div style={{ position: "relative" }}>
+            <Link href="#">
+              <a
+                className="navbar6-link nav-item"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleMenu(setServicesOpen, servicesOpen);
+                }}
+              >
+                Services
+              </a>
+            </Link>
             {servicesOpen && (
               <div className="navbar6dropdown-menu">
                 <Link href="/services/users" passHref>
@@ -109,38 +113,47 @@ export const Header = () => {
                 </Link>
               </div>
             )}
-          </a>
-        </Link>
-        <Link href="/#news" passHref>
-          <a className="navbar6-link nav-item" onClick={closeMobileMenu}>
-            News
-          </a>
-        </Link>
-        <Link href="/#warnings" passHref>
-          <a className="navbar6-link warnings" onClick={closeMobileMenu}>
-            Warnings
-          </a>
-        </Link>
-        <Link href="/results" passHref>
-          <a className="navbar6-link results" onClick={closeMobileMenu}>
-            RESULTS
-          </a>
-        </Link>
-
-        <Link href="/drug-policy" passHref>
-          <a className="navbar6-link nav-item" onClick={closeMobileMenu}>
-            Drug Policy
-          </a>
-        </Link>
-        <Link href="#">
-          <a
-            className="navbar6-link nav-item"
-            onClick={(e) => {
-              e.preventDefault();
-              toggleMenu(setAboutOpen, aboutOpen);
-            }}
-          >
-            About
+          </div>
+          <div style={{ position: "relative" }}>
+            <Link href="/#news" passHref>
+              <a className="navbar6-link nav-item" onClick={closeMobileMenu}>
+                News
+              </a>
+            </Link>
+          </div>
+          <div style={{ position: "relative" }}>
+            <Link href="/#warnings" passHref>
+              <a className="navbar6-link warnings" onClick={closeMobileMenu}>
+                Warnings
+              </a>
+            </Link>
+          </div>
+          <div style={{ position: "relative" }}>
+            <Link href="/results" passHref>
+              <a className="navbar6-link results" onClick={closeMobileMenu}>
+                RESULTS
+              </a>
+            </Link>
+          </div>
+          <div style={{ position: "relative" }}>
+            <Link href="/drug-policy" passHref>
+              <a className="navbar6-link nav-item" onClick={closeMobileMenu}>
+                Policy
+              </a>
+            </Link>
+          </div>
+          <div style={{ position: "relative" }}>
+            <Link href="#">
+              <a
+                className="navbar6-link nav-item"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleMenu(setAboutOpen, aboutOpen);
+                }}
+              >
+                Information
+              </a>
+            </Link>
             {aboutOpen && (
               <div className="navbar6dropdown-menu">
                 <Link href="/about/about" passHref>
@@ -151,17 +164,19 @@ export const Header = () => {
                 </Link>
               </div>
             )}
-          </a>
-        </Link>
-        <Link href="#">
-          <a
-            className="navbar6-link nav-item"
-            onClick={(e) => {
-              e.preventDefault();
-              toggleMenu(setContactOpen, contactOpen);
-            }}
-          >
-            Contact
+          </div>
+          <div style={{ position: "relative" }}>
+            <Link href="#">
+              <a
+                className="navbar6-link nav-item"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleMenu(setContactOpen, contactOpen);
+                }}
+              >
+                Contact
+              </a>
+            </Link>
             {contactOpen && (
               <div className="navbar6dropdown-menu">
                 <Link href="/contact/jobs" passHref>
@@ -172,11 +187,12 @@ export const Header = () => {
                 </Link>
               </div>
             )}
-          </a>
-        </Link>
-      </div>
-      <div className="xl:hidden flex flex-row items-center font-bold">
-        <LangSwitch />
+          </div>
+        </div>
+
+        <div className="xl:hidden flex flex-row items-center font-bold">
+          <LangSwitch />
+        </div>
       </div>
     </div>
   );

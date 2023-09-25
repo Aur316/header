@@ -816,12 +816,19 @@ td.ant-table-column-sort {
   z-index: 1000;
 }
 
-.navbar6-link,
-.navbar6-link a {
+.navbar6-link {
   text-decoration: none;
   color: white;
   margin-left: 15px;
   margin-right: 15px;
+  font-family: GrifoSBold, serif;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.navbar6-link a {
+  text-decoration: none;
+  color: white;
   font-family: GrifoSBold, serif;
   display: inline-block;
   font-size: 20px;
@@ -839,6 +846,9 @@ td.ant-table-column-sort {
   display: block;
   width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar6-link.results {
@@ -888,19 +898,23 @@ td.ant-table-column-sort {
 .navbar6-link.espanol:hover {
   color: #40a9ff;
 }
+.navbar6-wrapper {
+  position: relative;
+}
 
 .navbar6dropdown-menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: rgba(20, 21, 35, 0.85);
-  backdrop-filter: blur(5px);
+  background-color: rgba(20, 21, 35);
   border-radius: 8px;
-  margin-top: 250px;
+  top: 100px;
+  left: 0;
   padding: 10px;
   width: auto;
   position: absolute;
   z-index: 999;
+  margin-top: -10px;
 }
 
 .navbar6dropdown-menu a {
@@ -910,6 +924,13 @@ td.ant-table-column-sort {
   text-align: center;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-family: GrifoSBold, serif;
+  display: inline-block;
+  font-size: 20px;
 }
 
 .navbar6dropdown-menu a:hover {
@@ -967,8 +988,9 @@ td.ant-table-column-sort {
 
   .navbar6-link,
   .navbar6-link a {
-    margin-right: 0;
     margin-bottom: 8px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .navbar6hamburger-menu {
@@ -986,15 +1008,19 @@ td.ant-table-column-sort {
   .navbar6-mobile-menu {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    align-items: center;
   }
-
   .navbar6dropdown-menu {
-    position: static;
+    position: relative;
+    top: 0;
+    left: 0;
     background: transparent;
     margin-top: 10px;
     backdrop-filter: none;
     border-radius: 0;
     padding: 0;
+    width: 100%;
   }
 }
 
