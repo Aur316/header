@@ -35,7 +35,7 @@ const Presentation: React.FC<PresentationProps> = ({
         value={description}
         onChange={(e) => onDescriptionChange(e.target.value)}
         placeholder="Describe here"
-        className="mb-4 text-black"
+        className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
       />
       <p className="text-1xl font-bold mb-2 white">
@@ -48,7 +48,7 @@ const Presentation: React.FC<PresentationProps> = ({
           onAdulterationExpectationChange(e.target.value);
         }}
         buttonStyle="solid"
-        className="mb-4"
+        className="mb-4 customRadioStyle"
       >
         <Radio value="yes" style={{ marginRight: 16, color: "white" }}>
           Yes
@@ -65,7 +65,7 @@ const Presentation: React.FC<PresentationProps> = ({
             value={adulterationDetails}
             onChange={(e) => onAdulterationDetailsChange(e.target.value)}
             placeholder=""
-            className="mb-4 text-black"
+            className="customInput mb-4 text-black"
             style={{ width: "60%", textAlign: "center" }}
           />
         </div>

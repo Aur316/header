@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { GetServerSideProps } from "next";
+
 import dbConnect from "../../utils/dbConnect";
 import FormGroup from "../../models/FormGroup";
 import FirstSection from "../../components/filloutform/03FirstSection";
@@ -74,14 +75,16 @@ const FormGroupPage: React.FC<FormGroupProps> = ({ forms }) => {
   return (
     <div>
       <h1>Select a form</h1>
-      <select onChange={handleSelectChange}>
-        <option value="">Select...</option>
-        {forms.map((form) => (
-          <option key={form._id} value={form._id}>
-            {form.name}
-          </option>
-        ))}
-      </select>
+      <div className="customNativeContainer">
+        <select className="customSelectNative" onChange={handleSelectChange}>
+          <option value="">Select...</option>
+          {forms.map((form) => (
+            <option key={form._id} value={form._id}>
+              {form.name}
+            </option>
+          ))}
+        </select>
+      </div>
       {selectedForm && (
         <div>
           <FirstSection selectedForm={selectedForm} formData={formData} />

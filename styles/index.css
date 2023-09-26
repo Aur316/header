@@ -802,7 +802,7 @@ td.ant-table-column-sort {
   display: flex;
   justify-content: space-between !important;
   align-items: center;
-  background-color: rgba(20, 21, 35, 0.8);
+  background-color: rgba(20, 21, 35, 0.6);
   backdrop-filter: blur(50px);
   padding: 10px 20px;
   margin: 40px auto;
@@ -1025,3 +1025,170 @@ td.ant-table-column-sort {
 }
 
 /* Header css end */
+/* ****** DROPDOWN STYLE ****** */
+.customSelect {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 0 10px 0;
+  background-color: rgba(20, 21, 35);
+  border-radius: 14px !important;
+  color: white;
+  border: 2px solid #004c8c;
+  background-image: linear-gradient(135deg, #0074d9, #0d8584 70%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: none !important;
+}
+
+.customSelect .ant-select-selector {
+  background-color: rgba(20, 21, 35) !important;
+  color: white !important;
+  border-radius: 12px !important;
+  border: none !important;
+}
+
+.customSelect .ant-select-arrow {
+  color: white !important;
+}
+
+.customSelect:hover {
+  border-color: #0074d9 !important;
+}
+
+.customSelect .ant-select-dropdown-menu {
+  background-color: rgba(20, 21, 35) !important;
+}
+
+.customSelect .ant-select-dropdown-menu-item {
+  color: white !important;
+  background-color: rgba(20, 21, 35) !important;
+}
+
+.customSelect .ant-select-dropdown-menu-item:hover {
+  background-color: rgba(10, 11, 25) !important;
+}
+.customDropdown {
+  background-color: rgba(20, 21, 35) !important;
+  border-radius: 12px !important;
+}
+
+.customDropdown .ant-select-item {
+  color: white !important;
+  background-color: rgba(20, 21, 35) !important;
+}
+
+.customDropdown .ant-select-item:hover {
+  background-color: rgba(10, 11, 25) !important;
+}
+
+.customDropdown .ant-select-item-selected,
+.customDropdown .ant-select-item-active {
+  background-color: rgba(20, 21, 35) !important;
+}
+/* ****** DROPDOWN STYLE ****** */
+
+/* ****** INPUT STYLE ****** */
+.customInput,
+.customInput .ant-input,
+.customInput .ant-input-affix-wrapper {
+  background-color: rgba(20, 21, 35) !important;
+  border: 2px solid #004c8c !important;
+  border-image: linear-gradient(135deg, #0074d9, #0d8584 70%);
+  border-image-slice: 1;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  color: white !important;
+}
+
+.customInput:hover {
+  border-color: #0074d9 !important;
+}
+
+.customInput:focus {
+  border-color: #0074d9 !important;
+  box-shadow: none !important;
+}
+
+.customInput .ant-input-suffix,
+.customInput .ant-input-prefix {
+  background-color: rgba(20, 21, 35) !important;
+  border-color: rgba(20, 21, 35) !important;
+}
+
+.customInput .ant-input:not(:hover):not(:focus) {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.customInput .ant-input-affix-wrapper:not(:hover):not(:focus) {
+  border: none !important;
+  box-shadow: none !important;
+}
+/* ****** INPUT STYLE ****** */
+
+/* ****** SELECT STYLE ****** */
+.customNativeContainer {
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+  margin: -170px 0 10px 0;
+}
+
+.customSelectNative {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 0 10px 0;
+  background-color: rgba(20, 21, 35);
+  border-radius: 14px;
+  color: white;
+  border: 2px solid #004c8c;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: none;
+  appearance: none;
+  text-align-last: center;
+}
+
+.customSelectNative:hover,
+.customSelectNative:focus,
+.customSelectNative:active,
+.customSelectNative:focus-visible {
+  border-color: #0074d9 !important;
+  outline: none !important;
+}
+
+.customSelectNative option {
+  color: white;
+  background-color: rgba(20, 21, 35);
+  text-align: center;
+}
+
+.customSelectNative option:hover {
+  background-color: rgba(10, 11, 25) !important;
+}
+
+.customSelectNative::-ms-expand {
+  border: 1px solid #0074d9 !important;
+  border-radius: 14px !important;
+}
+/* ****** SELECT STYLE ****** */
+
+/* ****** CHECKBOX STYLE ****** */
+.customCheckboxGroup .ant-checkbox {
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.customCheckboxGroup .ant-checkbox + span {
+  color: white;
+  display: inline-block;
+}
+
+.customCheckboxGroup .checkboxItem {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ****** CHECKBOX STYLE ****** */
+
+/* input css end */

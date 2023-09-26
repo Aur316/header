@@ -24,7 +24,7 @@ const Availability: React.FC<{
       </p>
       <Input
         placeholder=""
-        className="mb-4 text-black"
+        className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => onPreviousServiceUsageChange(e.target.value)}
         value={previousServiceValue}

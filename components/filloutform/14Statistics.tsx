@@ -49,7 +49,7 @@ const Statistics: React.FC<{
         <p className="mb-4 white">How old are you? (e.g. 21)</p>
         <Input
           placeholder=""
-          className="mb-4 text-black"
+          className="customInput mb-4 text-black"
           style={{ width: "60%", textAlign: "center" }}
           onChange={(e) => setAge(e.target.value)}
           value={age}
@@ -91,7 +91,7 @@ const Statistics: React.FC<{
         </p>
         <Input
           placeholder=""
-          className="mb-4 text-black"
+          className="customInput mb-4 text-black"
           style={{ width: "60%", textAlign: "center" }}
           onChange={(e) => setConsumedSubstances(e.target.value)}
           value={consumedSubstances}
@@ -105,7 +105,7 @@ const Statistics: React.FC<{
         </p>
         <Input
           placeholder=""
-          className="mb-4 text-black"
+          className="customInput mb-4 text-black"
           style={{ width: "60%", textAlign: "center" }}
           onChange={(e) => setRegularDrugUse(e.target.value)}
           value={regularDrugUse}
@@ -115,82 +115,76 @@ const Statistics: React.FC<{
         </p>
         <Checkbox.Group
           style={{ width: "100%" }}
-          className="mb-4 text-white"
+          className="mb-4 text-white customCheckboxGroup"
           onChange={(checkedValues) =>
             setHarmReductionMeasures(checkedValues as string[])
           }
           value={harmReductionMeasures}
         >
-          <Checkbox
-            value="Drug checking (sending to a lab)"
-            style={{ display: "block", color: "white" }}
-          >
-            Drug checking (sending to a lab)
-          </Checkbox>
-          <Checkbox
-            value="Drug checking (TLC)"
-            style={{ display: "block", color: "white" }}
-          >
-            Drug checking (TLC)
-          </Checkbox>
-          <Checkbox
-            value="Drug checking (reagents)"
-            style={{ display: "block", color: "white" }}
-          >
-            Drug checking (reagents)
-          </Checkbox>
-          <Checkbox
-            value="Not sharing sniffing instruments with others"
-            style={{ display: "block", color: "white" }}
-          >
-            Not sharing sniffing instruments with others
-          </Checkbox>
-          <Checkbox
-            value="Not sharing needles with others"
-            style={{ display: "block", color: "white" }}
-          >
-            Not sharing needles with others
-          </Checkbox>
-          <Checkbox
-            value="Taking a small test dose when using a substance or batch for the first time"
-            style={{ display: "block", color: "white" }}
-          >
-            Taking a small test dose when using a substance or batch for the
-            first time
-          </Checkbox>
-          <Checkbox
-            value="Having a trip sitter"
-            style={{ display: "block", color: "white" }}
-          >
-            Having a trip sitter
-          </Checkbox>
-          <Checkbox
-            value="Taking care of set and setting"
-            style={{ display: "block", color: "white" }}
-          >
-            Taking care of set and setting
-          </Checkbox>
-          <Checkbox
-            value="Taking supplements to help recovery or reduce negative side-effects"
-            style={{ display: "block", color: "white" }}
-          >
-            Taking supplements to help recovery or reduce negative side-effects
-          </Checkbox>
-          <Checkbox
-            value="Asking questions in psychonaut wiki telegram group"
-            style={{ display: "block", color: "white" }}
-          >
-            Asking questions in psychonaut wiki telegram group
-          </Checkbox>
-          <Checkbox
-            value="Reading about the substance online in other websites"
-            style={{ display: "block", color: "white" }}
-          >
-            Reading about the substance online in other websites
-          </Checkbox>
-          <Checkbox value="Other" style={{ display: "block", color: "white" }}>
-            Other
-          </Checkbox>
+          <div className="checkboxItem">
+            <Checkbox value="Drug checking (sending to a lab)">
+              Drug checking (sending to a lab)
+            </Checkbox>
+          </div>
+          <div className="checkboxItem">
+            <Checkbox value="Drug checking (TLC)">Drug checking (TLC)</Checkbox>
+          </div>
+          <div className="checkboxItem">
+            <Checkbox value="Drug checking (reagents)">
+              <span>Drug checking (reagents)</span>
+            </Checkbox>
+          </div>
+          <div className="checkboxItem">
+            <Checkbox value="Not sharing sniffing instruments with others">
+              <span>Not sharing sniffing instruments with others</span>
+            </Checkbox>
+          </div>
+          <div className="checkboxItem">
+            <Checkbox value="Not sharing needles with others">
+              <span>Not sharing needles with others</span>
+            </Checkbox>
+          </div>
+          <div className="checkboxItem">
+            <Checkbox value="Taking a small test dose when using a substance or batch for the first time">
+              <span>
+                Taking a small test dose when using a substance or batch for the
+                first time
+              </span>
+            </Checkbox>
+          </div>
+          <div className="checkboxItem">
+            <Checkbox value="Having a trip sitter">
+              <span>Having a trip sitter</span>
+            </Checkbox>
+          </div>
+          <div className="checkboxItem">
+            <Checkbox value="Taking care of set and setting">
+              <span>Taking care of set and setting</span>
+            </Checkbox>
+          </div>
+          <div className="checkboxItem">
+            <Checkbox value="Taking supplements to help recovery or reduce negative side-effects">
+              <span>
+                Taking supplements to help recovery or reduce negative
+                side-effects
+              </span>
+            </Checkbox>
+          </div>
+          <div className="checkboxItem">
+            <Checkbox value="Asking questions in psychonaut wiki telegram group">
+              <span>Asking questions in psychonaut wiki telegram group</span>
+            </Checkbox>
+          </div>
+          <div className="checkboxItem">
+            <Checkbox value="Reading about the substance online in other websites">
+              <span>Reading about the substance online in other websites</span>
+            </Checkbox>
+          </div>
+          <div className="checkboxItem">
+            <Checkbox value="Other">
+              <span>Other</span>
+            </Checkbox>
+          </div>
         </Checkbox.Group>
         <br />
         <p className="mb-4 white">
@@ -222,7 +216,7 @@ const Statistics: React.FC<{
       </p>
       <Input
         placeholder=""
-        className="mb-4 text-black"
+        className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => setChangeInDrugUsage(e.target.value)}
         value={changeInDrugUsage}
@@ -234,7 +228,7 @@ const Statistics: React.FC<{
       </p>
       <Input
         placeholder=""
-        className="mb-4 text-black"
+        className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => setMissingServiceForHarmReduction(e.target.value)}
         value={missingServiceForHarmReduction}
@@ -246,7 +240,7 @@ const Statistics: React.FC<{
       </p>
       <Input
         placeholder=""
-        className="mb-4 text-black"
+        className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => setWillingToPayForTesting(e.target.value)}
         value={willingToPayForTesting}

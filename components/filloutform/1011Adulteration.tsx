@@ -50,7 +50,7 @@ const Adulteration: React.FC<AdulterationProps> = ({
             }}
             value={effects}
             placeholder="(please detail dosages, mode of preparation and consumption, desire/ non desired effects, etc.)"
-            className="mb-4 text-black"
+            className="customInput mb-4 text-black"
             style={{ width: "60%", textAlign: "center" }}
           />
         </div>

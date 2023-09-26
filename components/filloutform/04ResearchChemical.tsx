@@ -21,9 +21,8 @@ const ResearchChemical: React.FC<ResearchChemicalProps> = ({
         slang.
       </p>
       <Input
+        className="customInput "
         placeholder="Specify the substance here"
-        className="mb-4 text-black"
-        style={{ width: "60%", textAlign: "center" }}
         value={substance}
         onChange={(e) => {
           setSubstance(e.target.value);

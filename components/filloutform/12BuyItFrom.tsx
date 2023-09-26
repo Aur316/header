@@ -43,7 +43,7 @@ const BuyItFrom: React.FC<BuyItFromProps> = ({
       <p className="mb-4 white">Where did you buy it from?</p>
       <Input
         placeholder='(e.g. "www.rcshopexample.com" or "t.me/telegramrcgroupexample" or "Vendor 23 @ exampledarknet.onion"). If it&#39;s a cultivated or wild plant, please write WILD/CULTIVATED.'
-        className="mb-4 text-black"
+        className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => onPurchaseSourceChange(e.target.value)}
         value={purchaseSource}
@@ -53,7 +53,7 @@ const BuyItFrom: React.FC<BuyItFromProps> = ({
       <p className="mb-4 white">How much did it cost?</p>
       <Input
         placeholder="(please specify if &lsquo;per gram&rsquo; or other unit)"
-        className="mb-4 text-black"
+        className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => onCostChange(e.target.value)}
         value={cost}
@@ -66,7 +66,7 @@ const BuyItFrom: React.FC<BuyItFromProps> = ({
       </p>
       <Input
         placeholder="(add approximate date if not sure)"
-        className="mb-4 text-black"
+        className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => onPurchaseDateChange(e.target.value)}
         value={purchaseDate}
@@ -78,7 +78,7 @@ const BuyItFrom: React.FC<BuyItFromProps> = ({
       </p>
       <Input
         placeholder=""
-        className="mb-4 text-black"
+        className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => onSendingCountryChange(e.target.value)}
         value={sendingCountry}
@@ -90,7 +90,7 @@ const BuyItFrom: React.FC<BuyItFromProps> = ({
       </p>
       <Input
         placeholder=""
-        className="mb-4 text-black"
+        className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => onAdditionalNotesChange(e.target.value)}
         value={additionalNotes}
@@ -132,7 +132,7 @@ const BuyItFrom: React.FC<BuyItFromProps> = ({
       {selectedOption === "Other" && (
         <Input.TextArea
           placeholder="Please specify"
-          className="mb-4 text-black"
+          className="customInput mb-4 text-black"
           style={{ width: "60%" }}
           onChange={(e) => {
             onOtherIntendedActionChange(e.target.value);

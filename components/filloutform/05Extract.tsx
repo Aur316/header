@@ -157,6 +157,7 @@ const Extract: React.FC<ExtractProps> = ({
       </Radio.Group>
       {selectedSample === "other" && (
         <Input
+          className="customInput mb-4 text-black"
           placeholder="Specify"
           style={{
             width: "50%",
@@ -237,6 +238,7 @@ const Extract: React.FC<ExtractProps> = ({
       </Radio.Group>
       {selectedPart === "other" && (
         <Input
+          className="customInput mb-4 text-black"
           placeholder="Specify"
           style={{
             width: "50%",
@@ -253,6 +255,7 @@ const Extract: React.FC<ExtractProps> = ({
         you know how.
       </Title>
       <Input
+        className="customInput mb-4 text-black"
         placeholder="For example what method/tek was used, solvents, any other relevant extraction notes."
         style={{ color: "white", backgroundColor: "#1f1f1f" }}
         onChange={(e) => setExtractionDescription(e.target.value)}
@@ -321,6 +324,7 @@ const Extract: React.FC<ExtractProps> = ({
           of harvest, if fertilizers were used, time of year of harvest, etc)
         </p>
         <Input.TextArea
+          className="customInput mb-4 text-black"
           rows={4}
           onChange={(e) => setEthnoDescription(e.target.value)}
           value={ethnoDescription}

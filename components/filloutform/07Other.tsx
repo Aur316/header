@@ -22,7 +22,7 @@ const Other: React.FC<OtherProps> = ({
         value={sampleDescription}
         placeholder="Specify the substance here"
         onChange={(e) => setSampleDescription(e.target.value)}
-        className="mb-4 text-black"
+        className="customInput mb-4 text-black"
         style={{ width: "70%", textAlign: "center" }}
       />
       <br />

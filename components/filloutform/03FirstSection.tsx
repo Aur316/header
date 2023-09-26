@@ -181,8 +181,9 @@ const FirstSection: React.FC<FirstSectionProps> = ({
         Select one from: Research Chemical, Extracts, Plants, Others
       </div>
       <Select
+        className="customSelect"
+        dropdownClassName="customDropdown"
         placeholder="Select an option"
-        style={{ width: "100%", maxWidth: "500px", margin: "0 0 10px 0" }}
         onChange={handleChange}
       >
         <Option value="1">
