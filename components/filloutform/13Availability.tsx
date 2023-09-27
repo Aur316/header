@@ -19,11 +19,11 @@ const Availability: React.FC<{
     <div>
       <br />
 
-      <p className="mb-4 white">
+      <p className="mb-4 white text-center">
         Have you used a drug checking service before? If so, which/where?
       </p>
       <Input
-        placeholder=""
+        placeholder="Type here"
         className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => onPreviousServiceUsageChange(e.target.value)}
@@ -31,7 +31,7 @@ const Availability: React.FC<{
       />
       <br />
 
-      <p className="mb-4 white">
+      <p className="mb-4 white text-center">
         Would you be willing to answer questions about age/gender and drug usage
         for statistical purposes? (purely optional. Answering NO finishes the
         form. Answering YES leads to 9 more questions.)

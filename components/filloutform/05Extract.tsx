@@ -161,6 +161,7 @@ const Extract: React.FC<ExtractProps> = ({
           placeholder="Specify"
           style={{
             width: "50%",
+            textAlign: "center",
             margin: "0 auto",
             color: "white",
             backgroundColor: "#1f1f1f",
@@ -169,6 +170,7 @@ const Extract: React.FC<ExtractProps> = ({
           value={otherSample}
         />
       )}
+      <br />
       <Title level={4} style={{ color: "white" }}>
         What part of the plant is being sent to be tested (or was used to make
         the extract)?
@@ -206,16 +208,6 @@ const Extract: React.FC<ExtractProps> = ({
           Rootbark
         </Radio>
         <Radio
-          value="Bark / Stembark"
-          style={{
-            width: "30%",
-            textAlign: "center",
-            color: "white",
-          }}
-        >
-          Bark / Stembark
-        </Radio>
-        <Radio
           value="Branches"
           style={{
             width: "30%",
@@ -225,6 +217,17 @@ const Extract: React.FC<ExtractProps> = ({
         >
           Branches
         </Radio>
+        <Radio
+          value="Bark / Stembark"
+          style={{
+            width: "30%",
+            textAlign: "center",
+            color: "white",
+          }}
+        >
+          Bark / Stembark
+        </Radio>
+
         <Radio
           value="other"
           style={{
@@ -257,7 +260,11 @@ const Extract: React.FC<ExtractProps> = ({
       <Input
         className="customInput mb-4 text-black"
         placeholder="For example what method/tek was used, solvents, any other relevant extraction notes."
-        style={{ color: "white", backgroundColor: "#1f1f1f" }}
+        style={{
+          color: "white",
+          backgroundColor: "#1f1f1f",
+          textAlign: "center",
+        }}
         onChange={(e) => setExtractionDescription(e.target.value)}
         value={extractionDescription}
       />
@@ -316,15 +323,15 @@ const Extract: React.FC<ExtractProps> = ({
         </Radio>
       </Radio.Group>
       <br />
-      <div>
+      <div className="text-4xl font-bold mb-2 white">
         <Title level={4}>Ethnobotanical sample information</Title>
-        <p>
+        <p className="mb-4 white text-center">
           Please describe if you know any details regarding conditions of growth
           and harvest (for example general area where it was grown, time of year
           of harvest, if fertilizers were used, time of year of harvest, etc)
         </p>
         <Input.TextArea
-          className="customInput mb-4 text-black"
+          className="customInput mb-4 text-black text-center"
           rows={4}
           onChange={(e) => setEthnoDescription(e.target.value)}
           value={ethnoDescription}

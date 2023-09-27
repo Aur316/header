@@ -1,10 +1,12 @@
-import { useRouter } from "next/router";
+import { Select } from "antd";
 import { useState, useEffect } from "react";
 import { GetServerSideProps } from "next";
 
 import dbConnect from "../../utils/dbConnect";
 import FormGroup from "../../models/FormGroup";
 import FirstSection from "../../components/filloutform/03FirstSection";
+
+const { Option } = Select;
 
 interface FormGroupProps {
   forms: { name: string; _id: string }[];
@@ -40,14 +42,24 @@ const FormGroupPage: React.FC<FormGroupProps> = ({ forms }) => {
   const [formData, setFormData] = useState<any>({});
 
   const handleSelectChange = async (
-    e: React.ChangeEvent<HTMLSelectElement>
+    value: string | React.ChangeEvent<HTMLSelectElement>
   ) => {
-    setSelectedForm(e.target.value);
+    let selectedValue: string;
 
-    if (e.target.value) {
+    if (typeof value === "string") {
+      selectedValue = value;
+    } else if (value && value.target) {
+      selectedValue = value.target.value;
+    } else {
+      selectedValue = "";
+    }
+
+    setSelectedForm(selectedValue);
+
+    if (selectedValue) {
       try {
         const response = await fetch(
-          `/api/getFormData?formId=${e.target.value}`
+          `/api/getFormData?formId=${selectedValue}`
         );
         if (response.ok) {
           const formData = await response.json();
@@ -59,7 +71,7 @@ const FormGroupPage: React.FC<FormGroupProps> = ({ forms }) => {
         console.error("Error fetching form data:", error);
       }
     } else {
-      setFormData({}); // Clear data if no form is selected
+      setFormData({}); //Clear the data if no form is selected.
     }
   };
 
@@ -75,15 +87,20 @@ const FormGroupPage: React.FC<FormGroupProps> = ({ forms }) => {
   return (
     <div>
       <h1>Select a form</h1>
-      <div className="customNativeContainer">
-        <select className="customSelectNative" onChange={handleSelectChange}>
-          <option value="">Select...</option>
+      <div className="customSelectorContainer">
+        <Select
+          className="customSelector"
+          dropdownClassName="customDropdowner"
+          placeholder="Select..."
+          onChange={(value) => handleSelectChange(value)}
+        >
+          <Option>Select...</Option>
           {forms.map((form) => (
-            <option key={form._id} value={form._id}>
-              {form.name}
-            </option>
+            <Option key={form._id} value={form._id}>
+              {form.name}{" "}
+            </Option>
           ))}
-        </select>
+        </Select>
       </div>
       {selectedForm && (
         <div>

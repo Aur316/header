@@ -16,7 +16,7 @@ const ResearchChemical: React.FC<ResearchChemicalProps> = ({
       <h2 className="text-4xl font-bold mb-2 white">
         Specify Substance (e.g. 2-FDCK, 3-FEA, etc.)
       </h2>
-      <p className="mb-4 white ">
+      <p className="mb-4 white text-center">
         Please use an unambiguous name to describe the substance, no street
         slang.
       </p>
@@ -27,6 +27,7 @@ const ResearchChemical: React.FC<ResearchChemicalProps> = ({
         onChange={(e) => {
           setSubstance(e.target.value);
         }}
+        style={{ width: "60%", textAlign: "center" }}
       />
       <div></div>
     </div>

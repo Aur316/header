@@ -802,8 +802,8 @@ td.ant-table-column-sort {
   display: flex;
   justify-content: space-between !important;
   align-items: center;
-  background-color: rgba(20, 21, 35, 0.6);
-  backdrop-filter: blur(50px);
+  /* background-color: rgba(20, 21, 35, 0.0001);
+  backdrop-filter: blur(50px); */
   padding: 10px 20px;
   margin: 40px auto;
   width: calc(100% - 40px);
@@ -1098,6 +1098,9 @@ td.ant-table-column-sort {
   border-radius: 14px !important;
   box-shadow: none !important;
   color: white !important;
+  width: 70% !important;
+  max-width: 600px !important;
+  height: 30px;
 }
 
 .customInput:hover {
@@ -1127,68 +1130,158 @@ td.ant-table-column-sort {
 /* ****** INPUT STYLE ****** */
 
 /* ****** SELECT STYLE ****** */
-.customNativeContainer {
+
+.customSelectorContainer {
   display: flex;
+  height: 6vh;
   justify-content: center;
-  height: 10vh;
   margin: -170px 0 10px 0;
 }
 
-.customSelectNative {
-  width: 100%;
-  max-width: 500px;
+.customSelector {
+  width: 150px;
   margin: 0 0 10px 0;
   background-color: rgba(20, 21, 35);
-  border-radius: 14px;
+  border-radius: 14px !important;
   color: white;
-  border: 2px solid #004c8c;
+  border: 2px solid #0d8584;
   background-origin: border-box;
   background-clip: content-box, border-box;
-  box-shadow: none;
-  appearance: none;
-  text-align-last: center;
+  box-shadow: none !important;
 }
 
-.customSelectNative:hover,
-.customSelectNative:focus,
-.customSelectNative:active,
-.customSelectNative:focus-visible {
-  border-color: #0074d9 !important;
-  outline: none !important;
+.customSelector .ant-select-selector {
+  background-color: rgba(20, 21, 35) !important;
+  color: white !important;
+  border-radius: 12px !important;
+  border: none !important;
 }
 
-.customSelectNative option {
-  color: white;
-  background-color: rgba(20, 21, 35);
-  text-align: center;
+.customSelector .ant-select-arrow {
+  color: white !important;
 }
 
-.customSelectNative option:hover {
+.customSelector:hover {
+  border-color: #15cccc !important;
+}
+
+.customSelector .ant-select-dropdown-menu {
+  background-color: rgba(20, 21, 35) !important;
+}
+
+.customSelector .ant-select-dropdown-menu-item {
+  color: white !important;
+  background-color: rgba(20, 21, 35) !important;
+}
+
+.customSelector .ant-select-dropdown-menu-item:hover {
+  background-color: rgba(10, 11, 25) !important;
+}
+.customDropdowner {
+  background-color: rgba(20, 21, 35) !important;
+  border-radius: 12px !important;
+}
+
+.customDropdowner .ant-select-item {
+  color: white !important;
+  background-color: rgba(20, 21, 35) !important;
+}
+
+.customDropdowner .ant-select-item:hover {
   background-color: rgba(10, 11, 25) !important;
 }
 
-.customSelectNative::-ms-expand {
-  border: 1px solid #0074d9 !important;
-  border-radius: 14px !important;
+.customDropdowner .ant-select-item-selected,
+.customDropdowner .ant-select-item-active {
+  background-color: rgba(20, 21, 35) !important;
 }
 /* ****** SELECT STYLE ****** */
 
 /* ****** CHECKBOX STYLE ****** */
+.customCheckboxGroup {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
 .customCheckboxGroup .ant-checkbox {
-  margin-right: 8px;
-  display: inline-block;
+  margin-right: 8px !important;
+  display: inline-flex !important;
+  align-items: center !important;
 }
 
 .customCheckboxGroup .ant-checkbox + span {
-  color: white;
-  display: inline-block;
+  color: white !important;
+  display: inline-flex !important;
+  align-items: center !important;
 }
 
 .customCheckboxGroup .checkboxItem {
-  display: block;
-  margin-bottom: 10px;
+  display: flex !important;
+  align-items: center !important;
+  margin: 5px 0 !important;
+  width: 30% !important;
+  justify-content: flex-start !important;
 }
 
 /* ****** CHECKBOX STYLE ****** */
+.Btn {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(
+    to right,
+    #004c8c,
+    #0074d9,
+    #004c8c,
+    #004c8c,
+    #0074d9,
+    #004c8c
+  );
+  background-size: 250%;
+  background-position: left;
+  color: #0074d9;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+}
 
+.Btn::before {
+  position: absolute;
+  content: "Save";
+  color: #0074d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
+}
+
+.Btn:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:active {
+  transform: scale(0.95);
+}
+.parent-element {
+  display: flex;
+  justify-content: center;
+}
 /* input css end */

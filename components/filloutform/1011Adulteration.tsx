@@ -20,7 +20,7 @@ const Adulteration: React.FC<AdulterationProps> = ({
     <div>
       <div>
         <br />
-        <p className="mb-4 white">
+        <p className="mb-4 white text-center">
           Did you or somebody you know already consume this particular batch?
         </p>
         <Radio.Group
@@ -43,7 +43,7 @@ const Adulteration: React.FC<AdulterationProps> = ({
       {consumptionStatus === "yes" && (
         <div>
           <br />
-          <p className="mb-4 white">What were the effects?</p>
+          <p className="mb-4 white text-center">What were the effects?</p>
           <Input
             onChange={(e) => {
               onEffectsChange(e.target.value);

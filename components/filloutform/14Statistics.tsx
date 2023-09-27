@@ -46,9 +46,9 @@ const Statistics: React.FC<{
     <div>
       <div>
         <br />
-        <p className="mb-4 white">How old are you? (e.g. 21)</p>
+        <p className="mb-4 white text-center">How old are you? (e.g. 21)</p>
         <Input
-          placeholder=""
+          placeholder="Type here"
           className="customInput mb-4 text-black"
           style={{ width: "60%", textAlign: "center" }}
           onChange={(e) => setAge(e.target.value)}
@@ -57,7 +57,7 @@ const Statistics: React.FC<{
       </div>
       <div>
         <br />
-        <p className="mb-4 white">What is your gender?</p>
+        <p className="mb-4 white text-center">What is your gender?</p>
         <Radio.Group
           buttonStyle="solid"
           className="mb-4"
@@ -86,11 +86,11 @@ const Statistics: React.FC<{
       </div>
       <div>
         <br />
-        <p className="mb-4 white">
+        <p className="mb-4 white text-center">
           What psychoactive substances have you consumed so far in life?
         </p>
         <Input
-          placeholder=""
+          placeholder="Type here"
           className="customInput mb-4 text-black"
           style={{ width: "60%", textAlign: "center" }}
           onChange={(e) => setConsumedSubstances(e.target.value)}
@@ -99,18 +99,18 @@ const Statistics: React.FC<{
       </div>
       <div>
         <br />
-        <p className="mb-4 white">
+        <p className="mb-4 white text-center">
           Do you consume any drugs regularly? If so, which and how often (e.g.
           mushrooms every 2 weeks, weed every day)
         </p>
         <Input
-          placeholder=""
+          placeholder="Type here"
           className="customInput mb-4 text-black"
           style={{ width: "60%", textAlign: "center" }}
           onChange={(e) => setRegularDrugUse(e.target.value)}
           value={regularDrugUse}
         />
-        <p className="mb-4 white">
+        <p className="mb-4 white text-center">
           What harm reduction measures do you commonly use?
         </p>
         <Checkbox.Group
@@ -187,7 +187,7 @@ const Statistics: React.FC<{
           </div>
         </Checkbox.Group>
         <br />
-        <p className="mb-4 white">
+        <p className="mb-4 white text-center">
           Do you feel you have a healthy relationship with drugs?
         </p>
         <Radio.Group
@@ -211,35 +211,35 @@ const Statistics: React.FC<{
         </Radio.Group>
       </div>
       <br />
-      <p className="mb-4 white">
+      <p className="mb-4 white text-center">
         Is there anything you want to change regarding your drug usage?
       </p>
       <Input
-        placeholder=""
+        placeholder="Type here"
         className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => setChangeInDrugUsage(e.target.value)}
         value={changeInDrugUsage}
       />
       <br />
-      <p className="mb-4 white">
+      <p className="mb-4 white text-center">
         Is there any service or tool that feel is missing for harm reduction
         worldwide?
       </p>
       <Input
-        placeholder=""
+        placeholder="Type here"
         className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => setMissingServiceForHarmReduction(e.target.value)}
         value={missingServiceForHarmReduction}
       />
       <br />
-      <p className="mb-4 white">
+      <p className="mb-4 white text-center">
         Last question: How much would you be willing to pay, if anything, for
         testing samples if this wasn´t a free service? (e.g. 20e)
       </p>
       <Input
-        placeholder=""
+        placeholder="Type here"
         className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => setWillingToPayForTesting(e.target.value)}

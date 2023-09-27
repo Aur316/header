@@ -14,7 +14,7 @@ const Other: React.FC<OtherProps> = ({
       <h2 className="text-4xl font-bold mb-2 white">
         Sample being sent to test?
       </h2>
-      <p className="mb-4 white">
+      <p className="mb-4 white text-center">
         Please use an unambiguous name to describe the sample (for example
         5-MeO-DMT), no street slang.
       </p>

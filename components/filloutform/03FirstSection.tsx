@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Select, Button, Statistic } from "antd";
+import { Select } from "antd";
 import Extract from "./05Extract";
 import Other from "./07Other";
 import ResearchChemical from "./04ResearchChemical";
@@ -300,7 +300,9 @@ const FirstSection: React.FC<FirstSectionProps> = ({
           setWillingToPayForTesting={setWillingToPayForTesting}
         />
       )}
-      <button onClick={saveFormData}>Test Saving</button>
+      <div className="parent-element">
+        <button className="Btn" onClick={saveFormData} />
+      </div>
     </div>
   );
 };

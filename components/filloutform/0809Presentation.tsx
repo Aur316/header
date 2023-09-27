@@ -27,7 +27,7 @@ const Presentation: React.FC<PresentationProps> = ({
       <h2 className="text-4xl font-bold mb-2 white">
         Please describe color and form
       </h2>
-      <p className="mb-4 white">
+      <p className="mb-4 white text-center">
         For example: &quot;White powder&quot; or &quot;Blue square pill with
         computer logo&quot;
       </p>
@@ -38,7 +38,7 @@ const Presentation: React.FC<PresentationProps> = ({
         className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
       />
-      <p className="text-1xl font-bold mb-2 white">
+      <p className="text-1xl font-bold mb-2 white text-center">
         Do you expect your sample to be adulterated?
       </p>
       <Radio.Group
@@ -60,11 +60,13 @@ const Presentation: React.FC<PresentationProps> = ({
       {adulterationExpectation === "yes" && (
         <div>
           <br />
-          <p className="mb-4 white">What Adulterations do you expect?</p>
+          <p className="mb-4 white text-center">
+            What Adulterations do you expect?
+          </p>
           <Input
             value={adulterationDetails}
             onChange={(e) => onAdulterationDetailsChange(e.target.value)}
-            placeholder=""
+            placeholder="Type here"
             className="customInput mb-4 text-black"
             style={{ width: "60%", textAlign: "center" }}
           />

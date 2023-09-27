@@ -40,7 +40,7 @@ const BuyItFrom: React.FC<BuyItFromProps> = ({
     <div>
       <br />
 
-      <p className="mb-4 white">Where did you buy it from?</p>
+      <p className="mb-4 white text-center">Where did you buy it from?</p>
       <Input
         placeholder='(e.g. "www.rcshopexample.com" or "t.me/telegramrcgroupexample" or "Vendor 23 @ exampledarknet.onion"). If it&#39;s a cultivated or wild plant, please write WILD/CULTIVATED.'
         className="customInput mb-4 text-black"
@@ -50,7 +50,7 @@ const BuyItFrom: React.FC<BuyItFromProps> = ({
       />
       <br />
 
-      <p className="mb-4 white">How much did it cost?</p>
+      <p className="mb-4 white text-center">How much did it cost?</p>
       <Input
         placeholder="(please specify if &lsquo;per gram&rsquo; or other unit)"
         className="customInput mb-4 text-black"
@@ -60,7 +60,7 @@ const BuyItFrom: React.FC<BuyItFromProps> = ({
       />
       <br />
 
-      <p className="mb-4 white">
+      <p className="mb-4 white text-center">
         When did you buy or obtain the sample? (add approximate date if not
         sure)
       </p>
@@ -73,11 +73,11 @@ const BuyItFrom: React.FC<BuyItFromProps> = ({
       />
       <br />
 
-      <p className="mb-4 white">
+      <p className="mb-4 white text-center">
         From which country are you sending the sample to Kykeon Analytics?
       </p>
       <Input
-        placeholder=""
+        placeholder="Type here"
         className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => onSendingCountryChange(e.target.value)}
@@ -85,18 +85,18 @@ const BuyItFrom: React.FC<BuyItFromProps> = ({
       />
       <br />
 
-      <p className="mb-4 white">
+      <p className="mb-4 white text-center">
         Other relevant notes about the sample (if applicable)
       </p>
       <Input
-        placeholder=""
+        placeholder="Type here"
         className="customInput mb-4 text-black"
         style={{ width: "60%", textAlign: "center" }}
         onChange={(e) => onAdditionalNotesChange(e.target.value)}
         value={additionalNotes}
       />
       <br />
-      <p className="mb-4 white">
+      <p className="mb-4 white text-center">
         What will you do if your sample is found to be
         impure/adulterated/mislabeled?
       </p>
@@ -133,7 +133,11 @@ const BuyItFrom: React.FC<BuyItFromProps> = ({
         <Input.TextArea
           placeholder="Please specify"
           className="customInput mb-4 text-black"
-          style={{ width: "60%" }}
+          style={{
+            width: "60%",
+            textAlign: "center",
+            alignItems: "center",
+          }}
           onChange={(e) => {
             onOtherIntendedActionChange(e.target.value);
           }}
